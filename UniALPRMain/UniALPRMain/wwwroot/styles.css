@@ -1,0 +1,276 @@
+html {
+    font-family: Onest;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none!important;
+}
+
+
+
+
+
+
+.popup {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+}
+
+.popup_bg {
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+}
+
+
+.popup_img {
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-height: 90%;
+}
+
+.popup_img {
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+[class^="box-"] {
+    background-color: skyblue;
+    display: grid;
+    place-items: center;
+    height: 25vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transform: scale(0.9);
+    background-image: url(images/loading.webp);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.camera-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-left: 16px;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.event-list {
+    width: 87%;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    padding-right: 10px;
+}
+
+.full-h{
+    height : calc(100vh - 55px);
+}
+
+.camera-stream-img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.left-block-header{
+    margin: 0px;
+    margin-left: 30px;
+    margin-top: 26px;
+}
+
+.right-block-header{
+    margin: 0px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.header{
+    background-color: white;
+    width: 100vw;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 4px 20px -16px #178a00;
+    position: relative;
+    justify-content: space-between;
+}
+
+.main-layout{
+    height: calc(100vh - 55px);
+    width: 100vw;
+    display: flex;
+}
+
+.button {
+    text-align: center;
+    height: 40px;
+    vertical-align: middle;
+    line-height: 40px;
+    border-radius: 5px;
+    margin-right: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 120px;
+    float: left;
+    transition: background-color 200ms ease;
+    border: none;
+}
+
+.button-gray {
+    background: #b9bfbb;
+    color: black;
+}
+
+    .button-gray:hover {
+        background: #aaaeab;
+        color: black;
+    }
+
+
+.button-green {
+    background: #36b95e;
+    color: white;
+}
+
+    .button-green:hover {
+        background: #32aa56;
+        color: white;
+    }
+
+.button-red {
+    background: #b93636;
+    color: white;
+}
+
+    .button-red:hover {
+        background: #a83030;
+        color: white;
+    }
+
+.button-margin{
+    margin-top: 26px;
+    margin-bottom: 14px;
+}
+
+.form-control:focus {
+    border-color: #d7f3765d !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0.25rem #38d36838 !important;
+}
+
+.camera-grid-container {
+    padding: 40px;
+    background-color: rgb(222, 243, 222);
+    width: 100%;
+    padding: 20px;
+}
+
+.camera-grid-content{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.stream-img{
+    cursor: pointer;
+}
+
+.right-menu-container {
+    width: 25vw;
+    background-color: rgb(251, 253, 251);
+    display: flex;
+    flex-direction: column;
+    padding-top: 14px;
+    align-items: center;
+}
+
+.logo-img{
+    height: 70%;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.reg-event{
+    height: 130px;
+    background-color: white;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 3px 4px 3px rgba(8, 30, 6, 0.03);
+    margin-bottom: 12px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.gray-text{
+    color: #1d1d1d90;
+}
+
+.event-name {
+    margin: 0px;
+    margin-top: 8px;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.event-description{
+    margin: 0px;
+    margin-top: 4px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.event-sub-description{
+    margin: 0px;
+    margin-top: 2px;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.green {
+    background: #e4f7dc;
+    color: #42724a;
+}
+
+.red {
+    background: #fbe2e2;
+    color: #e24d4d;
+}

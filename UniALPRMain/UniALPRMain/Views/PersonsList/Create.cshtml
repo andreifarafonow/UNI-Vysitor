@@ -1,0 +1,60 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model UniALPRMain.Models.Person
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<div class="camera-grid-container full-h">
+
+    <div class="camera-grid-content">
+        <h2 class="left-block-header">Добавление нового сотрудника</h2>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <br/>
+                        <label asp-for="FullName" class="control-label"></label>
+                        <br/>
+                        <input asp-for="FullName" class="form-control" />
+                        <br/>
+                        <input name="ImageFile" type="file">
+                        <br/>
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+
+                    <br/>
+
+                    <div class="form-group">
+                        <input type="submit" value="Довавить сотрудника в базу" class="button button-green" />
+
+                        <a asp-action="Index">
+                            <div class="button button-gray">Назад к каталогу</div>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+<style>
+    .left-block-header {
+        margin: 0px;
+    }
+
+    .camera-grid-content {
+        padding: 28px;
+    }
+</style>

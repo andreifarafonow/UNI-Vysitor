@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+
+    UniALPRMain.Models.Event[] _events = ViewBag.Events;
+}
+
+
+@for(int i = 0; i < _events.Length; i++)
+{
+    var _event = _events[i];
+
+    <div class="reg-event @(_event.Result == UniALPRMain.Models.Event.ResultType.Confirm ? "green" : "red")" src="eventimages?id=@_event.Id">
+        <p class="event-name">@(_event.Result == UniALPRMain.Models.Event.ResultType.Confirm ? "Пропуск" : "Отказ")</p>
+        <p class="event-description">@_event.SubjectName</p>
+        @if (_event.Subject == UniALPRMain.Models.Event.SubjectType.Car)
+        {
+            <p class="event-sub-description">Гос. номер <strong>@_event.CarNumber</strong></p>
+        }
+        <p class="event-description gray-text">@_event.Time.ToString("G")</p>
+    </div>
+}
+

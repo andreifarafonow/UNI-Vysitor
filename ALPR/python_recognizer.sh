@@ -1,0 +1,3 @@
+PYTHONPATH=$PYTHONPATH:.:. \
+LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH \
+python3 recognizer.py

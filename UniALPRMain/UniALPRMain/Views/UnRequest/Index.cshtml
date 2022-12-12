@@ -1,0 +1,37 @@
+﻿@model UniALPRMain.Models.UnauthorizedRequest[]
+
+<div class="camera-grid-container full-h">
+
+    <div class="camera-grid-content">
+        <h2 class="left-block-header">Неавторизованные запросы</h2>
+        <table class="table" style="margin: 30px; width: 80vw;">
+            <thead>
+                <tr>
+                    <th>
+                        IP
+                    </th>
+                    <th>
+                        Браузер
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var req in Model)
+                {
+                    <tr>
+                        <td>
+                            @req.Ip
+                        </td>
+                        <td>
+                            @req.Browser
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

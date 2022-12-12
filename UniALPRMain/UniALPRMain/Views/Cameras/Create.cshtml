@@ -1,0 +1,56 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model UniALPRMain.Models.Camera
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="camera-grid-container full-h">
+
+    <div class="camera-grid-content">
+        <h2 class="left-block-header">Добавление камеры</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="Url" class="control-label"></label>
+                        <input asp-for="Url" class="form-control" />
+                        <span asp-validation-for="Url" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="PictureUrl" class="control-label"></label>
+                        <input asp-for="PictureUrl" class="form-control" />
+                        <span asp-validation-for="PictureUrl" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <input type="submit" value="Добавить камеру" class="button button-green" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<style>
+    .left-block-header {
+        margin: 0px;
+    }
+
+    .camera-grid-content {
+        padding: 28px;
+    }
+</style>

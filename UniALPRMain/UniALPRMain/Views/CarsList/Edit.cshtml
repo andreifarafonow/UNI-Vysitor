@@ -1,0 +1,63 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model UniALPRMain.Models.Car
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<div class="camera-grid-container full-h">
+
+    <div class="camera-grid-content">
+        <h2 class="left-block-header">Изменение данных транспортного средства</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="Number" class="control-label"></label>
+                        <input asp-for="Number" class="form-control" />
+                        <span asp-validation-for="Number" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <input type="submit" value="Применить изменения" class="button button-green" />
+                        <a asp-action="Index">
+                            <div class="button button-gray">Назад к каталогу</div>
+                        </a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<style>
+    .left-block-header {
+        margin: 0px;
+    }
+
+    .camera-grid-content {
+        padding: 28px;
+    }
+</style>

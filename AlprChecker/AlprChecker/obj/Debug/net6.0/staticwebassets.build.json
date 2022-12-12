@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "JKWTLi8mYwUQon1/QOzBolivNsL128Z/u6ia4TPuaxk=",
+  "Source": "AlprChecker",
+  "BasePath": "_content/AlprChecker",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "AlprChecker\\wwwroot",
+      "Source": "AlprChecker",
+      "ContentRoot": "D:\\Repos\\Backend2\\AlprChecker\\AlprChecker\\wwwroot\\",
+      "BasePath": "_content/AlprChecker",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Repos\\Backend2\\AlprChecker\\AlprChecker\\wwwroot\\images\\frame.jpg",
+      "SourceId": "AlprChecker",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Repos\\Backend2\\AlprChecker\\AlprChecker\\wwwroot\\",
+      "BasePath": "_content/AlprChecker",
+      "RelativePath": "images/frame.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\frame.jpg"
+    }
+  ]
+}

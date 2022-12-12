@@ -1,0 +1,83 @@
+﻿@{
+    UniALPRMain.Models.Camera[] _cameras = (UniALPRMain.Models.Camera[])ViewBag.Cameras;
+}
+
+
+
+
+<div class="main-layout">
+      <div class="camera-grid-container">
+
+        <div class="camera-grid-content">
+
+            <div style="display: flex; justify-content: space-between;">
+                <h2 class="left-block-header">Подключенные камеры</h2>
+
+                <a href="/Cameras/Create" style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;">
+                    <div class="button button-green" style="margin-top: 10px;">Подключить камеру</div>
+                 </a>
+            </div>
+          
+
+          <div class="camera-grid">
+                @for(int i = 0; i < _cameras.Length; i++)
+                {
+                    <p style="position: absolute; color: white; z-index: 1; margin-left: 30px; margin-top: 20px;">
+                        @((new Uri(_cameras[i].Url)).Host)
+                        </p>
+                    <img class="box-@(i+1) stream-img" src="@_cameras[i].Url">
+                }
+          </div>
+
+        </div>
+
+        
+
+      </div>
+
+      <div class="right-menu-container">
+        <p class="right-block-header">Зарегистрированные события</p>
+
+        <div class="event-list">
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <script src="/js/image_scale.js"></script>
+
+<script>
+    function perSecond() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/events', false);
+        xhr.send();
+        let html = xhr.responseText;
+
+        document.querySelector(".event-list").innerHTML = html;
+
+
+        $(".reg-event").click(function () {	// Событие клика на маленькое изображение
+		var img = $(this);	// Получаем изображение, на которое кликнули
+		var src = img.attr('src'); // Достаем из этого изображения путь до картинки
+		$("body").append("<div class='popup'>" + //Добавляем в тело документа разметку всплывающего окна
+			"<div class='popup_bg'></div>" + // Блок, который будет служить фоном затемненным
+			"<img src='" + src + "' class='popup_img' />" + // Само увеличенное фото
+			"</div>");
+		$(".popup").fadeIn(200); // Медленно выводим изображение
+		$(".popup_bg").click(function () {	// Событие клика на затемненный фон	   
+			$(".popup").fadeOut(200);	// Медленно убираем всплывающее окн	
+			setTimeout(function () {	// Выставляем таймер
+				$(".popup").remove(); // Удаляем разметку всплывающего окна
+			}, 200);
+		});
+	});
+    }
+
+    perSecond();
+    let timerId = setInterval(perSecond, 1000);
+</script>
